@@ -31,6 +31,13 @@ export default class App extends Component{
     }
   }
   render(){
+
+    setTimeout(()=>{
+      this.setState({
+        time:moment().format('LTS'),
+        date:moment().format('LL')
+      })
+    },1000)
     return(
       <View style={styles.container}>
         <Text style={styles.timeText}>{this.state.time}</Text>
